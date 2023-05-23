@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function Swap(){
+                var temp =document.images[0].src;
+                document.images[0].src=document.images[1].src;
+
+                document.images[1].src=temp;
+            }
+
+            function AutoSwap(){
+            setInterval(function(){Swap();},2000);
+            }
+        </script>
+    </head>
+    <body>
+
+        <img src="../images/abc.png" height="300" width="600">
+
+        <button onclick="AutoSwap()">Swap</button>
+
+        <img src="../images/logo.gif" height="300" width="600">
+        
+    </body>
+</html>
