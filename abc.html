@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+    <body>  
+        <h1>DATE</h1>
+        <p id="clock"></p>  
+        <p id="date"></p>  
+        <script>
+         function showTime()
+                {
+                    let d=new Date();
+                    let h=d.getHours();
+                    let m=d.getMinutes();
+                    let s=d.getSeconds();
+                    let day=d.getDay();
+                    let mom=d.getMonth()+1;
+                    let year=d.getFullYear();
+
+                    let ampm=h>=12 ?'PM':
+                    'AM';
+                     h=h%2;
+                     h=h?h:12;
+                     m=m<10?'0'+m:m;
+                     s=s<10?'0'+s:s;
+                   
+                     
+                     document.getElementById('clock').innerHTML=h+":"+m+":"+s;
+                     document.getElementById('date').innerHTML=day+":"+mon+":"+year;
+                     setTimeout(showTime,1000);
+                    
+
+                }
+           
+               showTime();   
+            
+        </script>
+        
+        </body> 
+    
+</html>
