@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function checkdata(f){
+            if(s.form.ntb.value==" "){
+                alert("Please enter full name:")
+                return false;
+            }
+            if(s.form.pdd.value=="0"){
+                alert("Choose program")
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action=" " method="get" onsubmit="checkdata()" name="sform" >
+    <b>Name:</b><input type="text" name="ntb" required>
+    <br>
+    <b>Program</b><select name="pdd">
+        <option value="0">Choose</option>
+        <option value="1">BSCS(GC)</option>
+        <option value="2">BSSE</option>
+    </select>
+    <br>
+    <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>

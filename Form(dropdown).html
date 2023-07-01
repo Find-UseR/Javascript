@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            function operation(f){
+                if(f.OperatorDD.value=='1'){
+                document.getElementById("res").value=parseInt(f.n1tb.value) + parseInt(f.n2tb.value)
+                }
+                else if(f.OperatorDD.value=='2'){
+                document.getElementById("res").value=parseInt(f.n1tb.value) - parseInt(f.n2tb.value)
+                }
+                else if(f.OperatorDD.value=='3'){
+                document.getElementById("res").value=parseInt(f.n1tb.value) * parseInt(f.n2tb.value)
+                }
+                else if(f.OperatorDD.value=='4'){
+                document.getElementById("res").value=parseInt(f.n1tb.value) / parseInt(f.n2tb.value)
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1 align="center"> Calulator</h1>
+        <form action="">
+         <table align="center">
+            <tr>
+                <td> Number 1 </td>
+                <td> <input type="number" name="n1tb" id="n1tb" value="20"></td>
+            </tr>
+            <tr>
+                <td> Number 2 </td>
+                <td> <input type="number" name="n2tb" id="n2tb" value="4"></td>
+            </tr>
+            <tr>
+                <td align="center" > Operator: </td>
+                <td>
+                    <select name="OperatorDD">
+                        <option value="1" onclick="operation(this.form,'+')">  + </option>
+                        <option value="2" onclick="operation(this.form,'-')">  - </option>
+                        <option value="3" onclick="operation(this.form,'*')">  * </option>
+                        <option value="4" onclick="operation(this.form,'/')">  / </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                 <input onclick="operation(this.form);" type="button" name="oprbtn" value="Show" /> 
+                </td> 
+            </tr>
+            <tr>
+                <td> Result: </td>
+                <td> <input type="number" name="res" id="res" ></td>
+            </tr>
+            </table>
+            </form>
+    </body>
+ 
+</html>
+

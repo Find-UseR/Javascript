@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script>
+
+    </script>
+</head>
+<body>
+    <form align="center" action="post">
+        <h1 alig="center">Registration Form</h1>
+        <span>UserId</span>
+        <input type="text" pattern="[A-Za-z]{9}[0-9]{4}" required><br><br>
+
+        <span>Password</span>
+        <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Password required"><br><br>
+
+        <span>Name</span>
+        <input type="text" required><br><br>
+
+        <span>Address</span>
+        <input type="text" pattern="[A-Za-z]{9}[0-9]{4}" required><br><br>
+
+        <span>Country</span>
+        <input type="text" required><br><br>
+        <select name="Opt">
+            <option value="1" onclick="operation(this.form,'+')"> Pakistan </option>
+            <option value="2" onclick="operation(this.form,'-')">  India </option>
+            <option value="3" onclick="operation(this.form,'*')">  Srilanka </option>
+            <option value="4" onclick="operation(this.form,'/')">  Nepal </option>
+        </select><br><br>
+
+        <span>Zip Code</span>
+        <input type="text" required  pattern="[0-9]{3}[]{4}" required><br><br>
+
+        <span>Email</span>
+        <input type="email" pattern="[A-Za-z]{3}[0-9]{4}"  required><br><br>
+
+        <b>Sex</b>
+
+        <span>Male</span>
+        <input type="radio" name="" id="">
+        <span>Female</span>
+        <input type="radio" name="" id=""><br><br>
+
+        <b>Language</b>
+        <span>English</span><input type="checkbox" name="" id="" required>
+        <span>Non-English</span><input type="checkbox" name="" id="" required><br><br>
+
+        <span>About</span>
+        <textarea> </textarea><br><br>
+
+
+        <input type="submit" >
+        
+    </form>
+</body>
+</html>

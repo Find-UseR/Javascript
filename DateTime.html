@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date|Time</title>
+    <script>
+        function startClock() {
+            var dt = new Date();
+            var month = dt.getMonth()
+            var date = dt.getDate();
+            var year = dt.getFullYear();
+            var hours = dt.getHours();
+            var minutes = dt.getMinutes();
+            var seconds = dt.getSeconds();
+            fullDate = date + '/' + (month + 1) + '/' + year + ' <br> ' + hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = fullDate;
+            setTimeout(function() {startClock();}, 1000)
+        }
+    </script>
+</head>
+<body onload="startClock()">
+    <p id="clock"></p>
+</body>
+</html>
