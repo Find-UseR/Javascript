@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>Registration Form</title>
+    <script>
+		function validateForm() {
+		
+			var userid = document.forms["myForm"]["userid"].value;
+			var password = document.forms["myForm"]["password"].value;
+			var name = document.forms["myForm"]["name"].value;
+			var address = document.forms["myForm"]["address"].value;
+			var country = document.forms["myForm"]["country"].value;
+			var zipcode = document.forms["myForm"]["zipcode"].value;
+			var email = document.forms["myForm"]["email"].value;
+			var gender = document.forms["myForm"]["gender"].value;
+			var language = document.forms["myForm"]["language"].value;
+
+			if (userid == "") {
+				alert("Please enter a User ID.");
+				return false;
+			}
+
+			if (password == "") {
+				alert("Please enter a Password.");
+				return false;
+			}
+
+			if (name == "") {
+				alert("Please enter your Name.");
+				return false;
+			}
+
+			if (address == "") {
+				alert("Please enter your Address.");
+				return false;
+			}
+
+			if (country == "") {
+				alert("Please select a Country.");
+				return false;
+			}
+
+			if (zipcode == "") {
+				alert("Please enter a Zipcode.");
+				return false;
+			}
+
+			if (email == "") {
+				alert("Please enter your Email.");
+				return false;
+			} else if (!/\S+@\S+\.\S+/.test(email)) {
+				alert("Please enter a valid Email.");
+				return false;
+			}
+
+			if (gender == "") {
+				alert("Please select a Gender.");
+				return false;
+			}
+
+			if (language == "English") {
+				alert("Please select a Language.");
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+</head>
+<body align="center">
+	<h1>Registration Form</h1>
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		<label for="userid">User ID:</label>
+		<input type="text" id="userid" name="userid"><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" pattern="[A-Za-z]{3}[0-9]{4}" ><br><br>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address" pattern="[A-Za-z]{4}[0-9]{4}[A-Za-z]{4}"><br><br>
+
+		<label for="country">Country:</label>
+		<select id="country" name="country">
+			<option value=""> Country</option>
+			<option value="USA">Pakistan</option>
+			<option value="Canada">India</option>
+			<option value="Mexico">US</option>
+			<option value="Other">Other</option>
+		</select><br><br>
+
+	
+        <label for="zipcodecode">Zipcode code</label>
+            <input type="text" id="zipcode" name="zipcode"
+            pattern="[A-Za-z]{3}[0-9]{4}" title="Three letter country code and then numbers."><br><br>
+
+
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" pattern="[A-Za-z]{3}[0-9]{3}"><br><br>
+
+		<label for="gender">Gender:</label>
+		<input type="radio" id="male" name="gender" value="Male">Male
+		<input type="radio" id="female" name="gender" value="Female">Female <br><br>
+
+		<label for="language">Language:</label>
+		<input type="checkbox" id="english" name="language" value="English">English
+		<input type="checkbox" id="non-eng" name="language" value="non-eng">Non-English <br><br>
+		
+
+		<label for="about">About</label>
+		<textarea id="about" name="about"></textarea><br><br>
+
+		<input type="submit" value="Register">
+	</form>
+
+	
+</body>
+</html>

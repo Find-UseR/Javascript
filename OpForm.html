@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <script language="javascript">
+        // function add(f){
+        //    document.getElementById("result").innerHTML= parseInt(f.firstNumber.value)+ parseInt(f.secondNumber.value)
+        // }
+        // function sub(f){
+         //    document.getElementById("result").innerHTML=f.firstNumber.value - f.secondNumber.value;
+        // }
+        // function mul(f){
+        //     document.getElementById("result").innerHTML=f.firstNumber.value * f.secondNumber.value;
+        // }
+        // function divi(f){
+        //     document.getElementById("result").innerHTML=f.firstNumber.value / f.secondNumber.value;
+        // }
+        function operation(f,opr){
+          if(opr=="add"){
+            document.getElementById("result").innerHTML= parseInt(f.firstNumber.value)+ parseInt(f.secondNumber.value)
+          }
+          else if(opr=="sub"){
+            document.getElementById("result").innerHTML=f.firstNumber.value - f.secondNumber.value;
+          }
+          else if(opr=="mul"){
+            document.getElementById("result").innerHTML=f.firstNumber.value * f.secondNumber.value;
+          }
+          else if(opr=="divi"){
+            document.getElementById("result").innerHTML=f.firstNumber.value / f.secondNumber.value;
+          }
+
+        }
+
+
+    </script>
+</head>
+<body> 
+    <form  action="">
+        <fieldset>
+            <legend align="center"><h1>Calculator</h1></legend>
+        <table align="center">
+            <tr >
+                <td > 
+                    Number 1:
+                    <input type="number" id="firstNumber" placeholder="Enter First Number"/>
+                </td>
+            </tr>
+            <tr >
+                <td>
+                    Number 2: 
+                    <input type="number" id="secondNumber" placeholder="Enter Second Number"/>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" value="Add" onclick="operation(this.form,'add')">
+                <input type="button" value="Sub" onclick="operation(this.form,'sub')">
+                <input type="button" value="Mul" onclick="operation(this.form,'mul')">
+                <input type="button" value="Divi" onclick="operation(this.form,'divi')">
+              </td>
+            </tr>
+            <td>
+                <p>Result:<div id="result">-----<div></p>
+            </td>  
+        </table>
+    </form>
+</body>
+</html>

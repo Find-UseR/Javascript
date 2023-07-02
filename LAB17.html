@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            var msg = "How many times you want to display";
+            var pro=prompt(msg);
+            for(i=2;i<=3;i++){
+            var a="what is 10+10?";
+            var ans=20;
+            var rimage='<img src="../images/logo.gif">';
+            var wimage='<img src="../images/abc.png">';
+            var uans=prompt(a);
+            
+            if(uans!=ans){
+                if(confirm("Wrong Answer! Try Again?")) {
+                    ans=prompt(a);
+                }
+                else{
+                    alert("You Quit..!");
+                }
+            }
+            else{
+                alert("Right Answer..!");
+           var img=(ans==uans)? rimage : wimage;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <script>document.write(img)</script>
+    </body>
+</html>
